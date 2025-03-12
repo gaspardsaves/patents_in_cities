@@ -1,0 +1,3 @@
+12/03/25 :
+Début de l'extraction des données des brevets américains avec l'API Patent Views
+
