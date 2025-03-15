@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import sqlite3
 
-# Partie 1 : Données des brevets
+# Données des brevets
 
 # Contruction dela liste des fichiers de données
 inputsRepertory = "inputs"
@@ -48,5 +48,3 @@ connex = sqlite3.connect(dataBase)
 df_PatentsUSA.to_sql("patents", connex, if_exists="replace", index=False)
 print(f"📂 Base de données crée avec succès : {dataBase}")
 connex.close()
-
-# Partie 2 : Données des villes et données démographiques
