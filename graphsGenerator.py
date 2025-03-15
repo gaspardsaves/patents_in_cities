@@ -1,5 +1,4 @@
 # Importation de bibliothèques
 import pandas as pd
 import geopandas as gpd
-import folium
-from folium.plugins import MarkerCluster
+

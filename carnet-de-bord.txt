@@ -1,3 +1,12 @@
 12/03/25 :
-Début de l'extraction des données des brevets américains avec l'API Patent Views
+Début de l'extraction des données des brevets américains avec l'API Patent Search
 
+13/03/25 :
+Nouvelles tentatives avec l'API Patent Search (échec erreur 500)
+
+14/03/25 :
+Abandon de l'idée d'utiliser l'API Patent Search (bugs nombreux API trop récente (API mise en ligne le 12/02))
+Réorganisation du code et utilisation des fichiers de données csv au vu des problèmes de l'API Patent Search
+Création d'un fichier permettant le téléchargement des tables de données
+Création d'un fichier permettant l'exécution des fichiers python l'un après l'autre
+Création des fichiers .env permettant la gestion des clés API pour l'utilisation future de l'API Census
