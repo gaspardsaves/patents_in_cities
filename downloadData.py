@@ -18,7 +18,7 @@ urlInputs = "https://annualized-gender-data-uspto.s3.amazonaws.com/{year}.csv"
 repertoryDestination = "inputs/"
 # Création du répertoire si nécessaire
 os.makedirs(repertoryDestination, exist_ok=True)
-'''
+
 def download_csv(url, repertoryDestination):
     # Gestion du nom du fichier
     filename = url.split("/")[-1]
@@ -42,7 +42,7 @@ def download_csv(url, repertoryDestination):
 for year in years:
     urlDef = urlInputs.format(year=year)
     download_csv(urlDef, repertoryDestination)
-'''
+
 # Partie 2 : Téléchargement des données de population des villes
 print("Partie 2 : Téléchargement des données de population des villes")
 
