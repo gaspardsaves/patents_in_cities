@@ -1,5 +1,6 @@
 12/03/25 :
 Début de l'extraction des données des brevets américains avec l'API Patent Search
+Tentative de carte interactive avec folium (abandon car trop grand nombre de données, impossible à gérer sur un nanvigateur)
 
 13/03/25 :
 Nouvelles tentatives avec l'API Patent Search (échec erreur 500)
@@ -10,3 +11,15 @@ Réorganisation du code et utilisation des fichiers de données csv au vu des pr
 Création d'un fichier permettant le téléchargement des tables de données
 Création d'un fichier permettant l'exécution des fichiers python l'un après l'autre
 Création des fichiers .env permettant la gestion des clés API pour l'utilisation future de l'API Census
+Rédaction du code de téléchargement des tables de données
+Création d'une base de données des brevets américains nettoyé avec les données utiles pour notre étude
+Rédaction du code permettant de compter le nombre de brevets par ville américaine
+Rédaction du code permettant de récupérer la population de chaque ville ayant des brevets
+Rédaction du code permettant de calculer le nombre de brevets par habitants dans chacune de ces villes
+
+15/03/25 :
+Rédaction du code permettant de générer le graphique mettant en relation le nombre de brevets par habitants et le nombre d'habitants de chaque ville
+Renoncement à l'utilisation de l'API Census pour la récupération de la population les limites du nombre de requête et les différences de formatage dans les localisations entre Patent Views et Census
+
+17/03/25 :
+

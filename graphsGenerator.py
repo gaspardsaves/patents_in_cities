@@ -185,7 +185,7 @@ df2 = pd.read_csv("data/test.csv")
 df3 = pd.merge(df1, df2, on=["city", "state"], how="inner")
 
 df = df3[df3['PopMean_2010_2023'] > 0]
-df["PatentsPerCapita"] = df["nbrPatents"] / df["PopMean_2010_2023"]
+df.loc[:,"PatentsPerCapita"] = df["nbrPatents"] / df["PopMean_2010_2023"]
 
 # Enlèvement des valeurs extrêmes
 df = df[(df["PatentsPerCapita"] > df["PatentsPerCapita"].quantile(0.01)) &
