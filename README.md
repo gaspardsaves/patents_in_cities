@@ -1,6 +1,6 @@
 # 🔬 patents_in_cities
 
-**Économie urbaine** *Deuxième année de pré-ingénieur CY-Tech — Semestre 2 (2024-2025)*  
+**Économie urbaine**    *Deuxième année de pré-ingénieur CY-Tech — Semestre 2 (2024-2025)*  
 
 🎯 Le projet vise à explorer la question suivante :  
 **« Les grandes agglomérations produisent-elles plus de brevets par habitant ? »**
@@ -12,7 +12,7 @@
 
 ## 📄 Description du projet
 
-Ce projet croise des données de brevets et de population pour étudier l'effet de la taille des villes américaines sur leur capacité à produire des brevets entre 2010 et 2023. Ce projet distingue également les brevets en fonction de leur secteurs d'activités
+Ce projet croise des données de brevets et de population pour étudier l'effet de la taille des villes américaines sur leur capacité à produire des brevets entre 2010 et 2023. Il distingue également les brevets en fonction de leur secteurs d'activités
 
 ## 📚 Technologies utilisées
 
@@ -60,21 +60,32 @@ Pour exécuter le pipeline complet :
 ```bash
 python exec.py
 ```
+Ce fichier orchestre toutes les étapes suivantes :
 
-Ce fichier orchestre automatiquement :
-1. Le téléchargement des données et traitement des données de population (`downloadData.py`)
-2. L’extraction et le nettoyage des brevets (`extraction.py`)
-3. Les traitements statistiques et graphiques (`graphsGenerator.py`)
+### 📥 1. Téléchargement et traitement des données (`downloadData.py`)
+- Télécharge les fichiers Excel de population et les CSV des brevets
+- Nettoie les fichiers et convertit en `.csv`
+- Supprime les suffixes des noms de ville ("city", "town", etc.) pour faciliter la jointure
 
+### 🧹 2. Extraction et nettoyage des brevets (`extraction.py`)
+- Charge tous les fichiers de brevets disponibles dans `inputs/`
+- Filtre uniquement les brevets américains
+- Normalise les noms d'états pour la jointure avec les fichiers de population
+- Crée une base SQLite et y enregistre les données nettoyées
 
-## 📈 Résultats attendus
+### 📈 3. Analyse statistique et graphiques (`graphsGenerator.py`)
+- Calcule le nombre de brevets par habitant pour chaque ville
+- Nettoie les outliers via les quantiles extrêmes
+- Applique une régression linéaire entre population et brevets par habitant
+- Génère les graphiques de régression et les enregistre dans `/outputs`
 
-- Régressions linéaires entre population et nombre de brevets par habitants
-- Comparaison par domaines (Chemistry, Mechanical engineering…)
-- Fichiers `.csv` et `.png` produits dans `/outputs`
+## 🧪 Résultats générés
 
+- Régressions entre logarithme de la population et des brevets par habitant
+- Comparaison par domaine technologique (Chemistry, Mechanical engineering, etc.)
+- Résultats sauvegardés en `.csv` et `.png` dans le dossier `outputs/`
 
-## 📌 À venir
+## 🧭 Améliorations futures
 
 - Passage à l'étude des agglomérations (Metropolitan Statistical Areas)
 - Intégration de la nouvelle API PatentView 
