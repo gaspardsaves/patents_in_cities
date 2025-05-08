@@ -21,5 +21,3 @@ Rédaction du code permettant de calculer le nombre de brevets par habitants dan
 Rédaction du code permettant de générer le graphique mettant en relation le nombre de brevets par habitants et le nombre d'habitants de chaque ville
 Renoncement à l'utilisation de l'API Census pour la récupération de la population les limites du nombre de requête et les différences de formatage dans les localisations entre Patent Views et Census
 
-17/03/25 :
-
